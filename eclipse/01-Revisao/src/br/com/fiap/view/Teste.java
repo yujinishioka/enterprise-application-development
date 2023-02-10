@@ -16,5 +16,10 @@ public class Teste {
 		);
 		
 		aluno1.descansar();
+		
+		if (aluno1.getNome() == "Vinicius Yuji Nishioka")
+			System.out.println("Sim");
+		else
+			System.out.println("Não");
 	}
 }
