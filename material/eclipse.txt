@@ -1,0 +1,4 @@
+Atalhos do Eclipse:
+
+Ctrl + 3 -> gcfs
+Ctrl + D -> apaga linha
