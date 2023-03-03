@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="CLIENTE_ORACLE" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<properties>
+			
+			<!-- Exibe as queries executadas no banco de dados -->
+			<property name="hibernate.show_sql" value="true"/>
+			
+			<!-- Formatar as queries que estão sendo exibidas  -->
+			<property name="hibernate.format_sql" value="true" />
+			
+			<!-- Definir o que será realizado no banco
+				update -> atualizar/criar as tabelas de acordo com as classes
+				create -> apaga e cria as tabelas de acordo com as classes
+				validate -> validar se as tabelas estão de acordo com as classes
+			 -->
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			
+			<!-- Dialeto, responsável por gerar o SQL nativo -->
+			<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
+			
+			<!-- Driver do banco -->
+			<property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver" />
+			
+			<!-- Usuário do banco, rmxxxxxx -->
+			<property name="javax.persistence.jdbc.user" value="rm92895"/>
+			
+			<!-- Senha do banco, data de nascimento com 6 digitos -->
+			<property name="javax.persistence.jdbc.password" value="160596"/>
+			
+			<!-- URL do banco -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl"/>
+		</properties>	
+	</persistence-unit>
+</persistence>
