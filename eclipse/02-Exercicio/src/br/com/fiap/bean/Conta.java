@@ -6,8 +6,8 @@ import br.com.fiap.exception.SaldoInsuficienteException;
 
 /*
  * Classe Abstrata: Estrutura para as classes filhas
- * 1 - Não pode ser instanciada
- * 2 - Pode conter métodos abstratos
+ * 1 - Nï¿½o pode ser instanciada
+ * 2 - Pode conter mï¿½todos abstratos
  */
 public abstract class Conta {
 	public int agencia, numero;
@@ -22,10 +22,14 @@ public abstract class Conta {
 		this.saldo = saldo;
 	}
 	
-	// Métodos
-	public abstract void depositar(double valor);
+	// Metodos
+	public void depositar(double valor) {
+		saldo = saldo - valor;
+	};
+	
 	public abstract void retirar(double valor) throws SaldoInsuficienteException;
 
+	// Getters e Setters
 	public int getAgencia() {
 		return agencia;
 	}
