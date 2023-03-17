@@ -4,6 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+import br.com.fiap.entity.TipoUsuario;
 import br.com.fiap.entity.Usuario;
 
 public class TesteAtualizacao {
@@ -13,8 +14,10 @@ public class TesteAtualizacao {
 		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("CLIENTE_ORACLE");
 		EntityManager em = fabrica.createEntityManager();
 		
-		Usuario user = em.find(Usuario.class, 1);
-		em.merge(user).setAltura(1.8f);
+		Usuario user = new Usuario("Alan", "Fiap@123", "17493857211", "alanzoka@gmail.com", 1.71f, TipoUsuario.DEFAULT);
+		user.setCodigo(2);
+		
+		em.merge(user);
 		
 		em.getTransaction().begin();
 		em.getTransaction().commit();

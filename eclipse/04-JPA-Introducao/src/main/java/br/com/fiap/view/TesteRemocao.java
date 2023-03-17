@@ -6,20 +6,20 @@ import javax.persistence.Persistence;
 
 import br.com.fiap.entity.Usuario;
 
-public class TestePesquisa {
+public class TesteRemocao {
 
 	public static void main(String[] args) {
-		// Fabrica
+
 		EntityManagerFactory fabrica = Persistence.createEntityManagerFactory("CLIENTE_ORACLE");
-		
-		// Criar o Entity Manager
 		EntityManager em = fabrica.createEntityManager();
 		
-		// Pesquisar o usuario pela PK
 		Usuario user = em.find(Usuario.class, 2);
 		
-		// Exibir
-		System.out.println(user.toString());
+		em.remove(user);
+		
+		em.getTransaction().begin();
+		em.getTransaction().commit();
+
 	}
 
 }
