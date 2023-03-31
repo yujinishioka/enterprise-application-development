@@ -17,6 +17,56 @@ import javax.persistence.TemporalType;
 @SequenceGenerator(sequenceName = "SQ_T_LIVRO", name="livro", allocationSize = 1)
 public class Livro {
 	
+	public Livro() {}
+	
+	public Livro(String titulo, Genero genero, Integer pagina, Calendar dataLancamento) {
+		super();
+		this.titulo = titulo;
+		this.genero = genero;
+		this.pagina = pagina;
+		this.dataLancamento = dataLancamento;
+	}
+
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
+	public Integer getPagina() {
+		return pagina;
+	}
+
+	public void setPagina(Integer pagina) {
+		this.pagina = pagina;
+	}
+
+	public Calendar getDataLancamento() {
+		return dataLancamento;
+	}
+
+	public void setDataLancamento(Calendar dataLancamento) {
+		this.dataLancamento = dataLancamento;
+	}
+	
 	@Id	
 	@Column(name="cd_livro")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "livro")
