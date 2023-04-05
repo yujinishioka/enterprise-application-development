@@ -5,7 +5,7 @@ import java.lang.reflect.ParameterizedType;
 import javax.persistence.EntityManager;
 
 import br.com.fiap.jpa.exception.CommitException;
-import br.com.fiap.jpa.exception.EntityNotFoundException;
+import br.com.fiap.jpa.exception.EntityNotFoundedException;
 
 public class GenericDaoImpl<E, K> implements GenericDao<E, K>{
 	
@@ -25,15 +25,15 @@ public class GenericDaoImpl<E, K> implements GenericDao<E, K>{
 		em.merge(entidade);
 	}
 
-	public void deletar(K id) throws EntityNotFoundException {
+	public void deletar(K id) throws EntityNotFoundedException {
 		E entidade = buscar(id);
 		em.remove(entidade);
 	}
 
-	public E buscar(K id) throws EntityNotFoundException {
+	public E buscar(K id) throws EntityNotFoundedException {
 		E entidade = em.find(clazz, id);
 		if (entidade == null) {
-			throw new EntityNotFoundException();
+			throw new EntityNotFoundedException();
 		}
 		return entidade;
 	}
