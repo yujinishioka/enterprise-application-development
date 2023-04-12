@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -19,9 +20,8 @@ public class Pedido {
 	
 	public Pedido() {}
 	
-	public Pedido(Integer codigo, Calendar dataPedido, Float valorPedido) {
+	public Pedido(Calendar dataPedido, Float valorPedido) {
 		super();
-		this.codigo = codigo;
 		this.dataPedido = dataPedido;
 		this.valorPedido = valorPedido;
 	}
@@ -61,5 +61,9 @@ public class Pedido {
 	
 	@Column(name="vl_pedido", nullable = false, length = 10)
 	private Float valorPedido;
+	
+	// mappedBy: Nome do atributo que mapeia a FK
+	@OneToOne(mappedBy = "pedido")
+	private NotaFiscal notaFiscal;
 
 }

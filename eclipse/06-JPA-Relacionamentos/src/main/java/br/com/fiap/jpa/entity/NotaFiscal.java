@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -19,9 +21,7 @@ public class NotaFiscal {
 	
 	public NotaFiscal() {}
 	
-	public NotaFiscal(Integer codigo, Calendar dataNota, Float valorNota) {
-		super();
-		this.codigo = codigo;
+	public NotaFiscal(Calendar dataNota, Float valorNota) {
 		this.dataNota = dataNota;
 		this.valorNota = valorNota;
 	}
@@ -61,5 +61,10 @@ public class NotaFiscal {
 	
 	@Column(name="vl_nota", nullable = false, length = 10)
 	private Float valorNota;
+	
+	// FK
+	@OneToOne
+	@JoinColumn(name="cd_pedido", nullable = false)
+	private Pedido pedido;
 
 }
