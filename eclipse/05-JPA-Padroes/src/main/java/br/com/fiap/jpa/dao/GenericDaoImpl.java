@@ -21,16 +21,16 @@ public class GenericDaoImpl<E, K> implements GenericDao<E, K>{
 				.getGenericSuperclass()).getActualTypeArguments()[0];
 	}
 
-	public void salvar(E entidade) {
-		em.merge(entidade);
+	public E salvar(E entidade) {
+		return em.merge(entidade);
 	}
 
 	public void deletar(K id) throws EntityNotFoundedException {
-		E entidade = buscar(id);
+		E entidade = pesquisar(id);
 		em.remove(entidade);
 	}
 
-	public E buscar(K id) throws EntityNotFoundedException {
+	public E pesquisar(K id) throws EntityNotFoundedException {
 		E entidade = em.find(clazz, id);
 		if (entidade == null) {
 			throw new EntityNotFoundedException();

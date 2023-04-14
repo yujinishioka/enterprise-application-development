@@ -15,16 +15,16 @@ public class PedidoDaoImpl extends GenericDaoImpl<Pedido, Integer> implements Pe
 		this.em = em;
 	}
 
-	public void salvar(Pedido pedido) {
-		em.persist(pedido);
+	public Pedido salvar(Pedido pedido) {
+		return em.merge(pedido);
 	}
 
 	public void deletar(Integer id) throws EntityNotFoundedException {
-		Pedido pedido = buscar(id);
+		Pedido pedido = pesquisar(id);
 		em.remove(pedido);
 	}
 
-	public Pedido buscar(Integer id) throws EntityNotFoundedException {
+	public Pedido pesquisar(Integer id) throws EntityNotFoundedException {
 		Pedido pedido = em.find(Pedido.class, id);
 		if (pedido == null) {
 			throw new EntityNotFoundedException();

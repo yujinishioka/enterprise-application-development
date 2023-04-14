@@ -15,16 +15,16 @@ public class NotaFiscalDaoImpl extends GenericDaoImpl<NotaFiscal, Integer> imple
 		this.em = em;
 	}
 	
-	public void salvar(NotaFiscal notaFiscal) {
-		em.persist(notaFiscal);
+	public NotaFiscal salvar(NotaFiscal notaFiscal) {
+		return em.merge(notaFiscal);
 	}
 
 	public void deletar(Integer id) throws EntityNotFoundedException {
-		NotaFiscal notaFiscal = buscar(id);
+		NotaFiscal notaFiscal = pesquisar(id);
 		em.remove(notaFiscal);
 	}
 
-	public NotaFiscal buscar(Integer id) throws EntityNotFoundedException {
+	public NotaFiscal pesquisar(Integer id) throws EntityNotFoundedException {
 		NotaFiscal notaFiscal = em.find(NotaFiscal.class, id);
 		if (notaFiscal == null) {
 			throw new EntityNotFoundedException();

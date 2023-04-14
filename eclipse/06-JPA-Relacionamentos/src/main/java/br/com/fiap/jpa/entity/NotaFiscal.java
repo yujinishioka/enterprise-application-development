@@ -2,8 +2,10 @@ package br.com.fiap.jpa.entity;
 
 import java.util.Calendar;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -21,9 +23,10 @@ public class NotaFiscal {
 	
 	public NotaFiscal() {}
 	
-	public NotaFiscal(Calendar dataNota, Float valorNota) {
+	public NotaFiscal(Calendar dataNota, Float valorNota, Pedido pedido) {
 		this.dataNota = dataNota;
 		this.valorNota = valorNota;
+		this.pedido = pedido;
 	}
 
 	public Integer getCodigo() {
@@ -50,6 +53,14 @@ public class NotaFiscal {
 		this.valorNota = valorNota;
 	}
 
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
 	@Id	
 	@Column(name="cd_nota")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "nota_fiscal")
@@ -63,7 +74,7 @@ public class NotaFiscal {
 	private Float valorNota;
 	
 	// FK
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name="cd_pedido", nullable = false)
 	private Pedido pedido;
 

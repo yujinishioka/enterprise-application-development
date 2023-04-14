@@ -38,7 +38,7 @@ public class View {
 		}
 		
 		try {
-			Livro busca = dao.buscar(1);
+			Livro busca = dao.pesquisar(1);
 			System.out.println(busca.getTitulo());
 		} catch(EntityNotFoundedException e) {
 			System.err.println(e.getMessage());
