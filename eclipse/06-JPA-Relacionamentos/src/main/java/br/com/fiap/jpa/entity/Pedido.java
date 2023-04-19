@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -18,7 +20,34 @@ import javax.persistence.TemporalType;
 @SequenceGenerator(sequenceName = "SQ_T_PEDIDO", name = "pedido", allocationSize = 1)
 public class Pedido {
 	
+	@Id	
+	@Column(name="cd_pedido")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pedido")
+	private Integer codigo;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="dt_pedido", nullable = false, updatable = false)
+	private Calendar dataPedido;
+	
+	@Column(name="vl_pedido", nullable = false, length = 10)
+	private Float valorPedido;
+	
+	// mappedBy: Nome do atributo que mapeia a FK
+	@OneToOne(mappedBy = "pedido")
+	private NotaFiscal notaFiscal;
+	
+	@ManyToOne
+	@JoinColumn(name="cd_cliente", nullable = false)
+	private Cliente cliente;
+	
 	public Pedido() {}
+	
+	public Pedido(Calendar dataPedido, Float valorPedido, Cliente cliente) {
+		super();
+		this.dataPedido = dataPedido;
+		this.valorPedido = valorPedido;
+		this.cliente = cliente;
+	}
 	
 	public Pedido(Calendar dataPedido, Float valorPedido) {
 		super();
@@ -50,20 +79,19 @@ public class Pedido {
 		this.valorPedido = valorPedido;
 	}
 
-	@Id	
-	@Column(name="cd_pedido")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "pedido")
-	private Integer codigo;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="dt_pedido", nullable = false, updatable = false)
-	private Calendar dataPedido;
-	
-	@Column(name="vl_pedido", nullable = false, length = 10)
-	private Float valorPedido;
-	
-	// mappedBy: Nome do atributo que mapeia a FK
-	@OneToOne(mappedBy = "pedido")
-	private NotaFiscal notaFiscal;
+	public NotaFiscal getNotaFiscal() {
+		return notaFiscal;
+	}
 
+	public void setNotaFiscal(NotaFiscal notaFiscal) {
+		this.notaFiscal = notaFiscal;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 }
