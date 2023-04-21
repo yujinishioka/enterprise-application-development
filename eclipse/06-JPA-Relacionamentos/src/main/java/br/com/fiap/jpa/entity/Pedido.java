@@ -1,13 +1,18 @@
 package br.com.fiap.jpa.entity;
 
 import java.util.Calendar;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
@@ -35,6 +40,14 @@ public class Pedido {
 	// mappedBy: Nome do atributo que mapeia a FK
 	@OneToOne(mappedBy = "pedido")
 	private NotaFiscal notaFiscal;
+	
+	@ManyToMany(cascade = CascadeType.MERGE)
+	@JoinTable(
+			name="T_ITEM_PEDIDO", 
+			joinColumns = @JoinColumn(name="cd_pedido"), 
+			inverseJoinColumns = @JoinColumn(name="cd_produto")
+	)
+	private List<Produto> produtos;
 	
 	@ManyToOne
 	@JoinColumn(name="cd_cliente", nullable = false)
@@ -94,4 +107,13 @@ public class Pedido {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+
+	public List<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<Produto> produtos) {
+		this.produtos = produtos;
+	}
+	
 }

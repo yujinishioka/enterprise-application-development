@@ -1,7 +1,9 @@
 package br.com.fiap.jpa.view;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,6 +12,7 @@ import br.com.fiap.jpa.dao.ClienteDao;
 import br.com.fiap.jpa.dao.ClienteDaoImpl;
 import br.com.fiap.jpa.entity.Cliente;
 import br.com.fiap.jpa.entity.Pedido;
+import br.com.fiap.jpa.entity.Produto;
 import br.com.fiap.jpa.exception.CommitException;
 import br.com.fiap.jpa.singleton.EntityManagerFactorySingleton;
 
@@ -28,6 +31,13 @@ public class CadastroOneToMany {
 		
 		cliente.addPedido(pedido1);
 		cliente.addPedido(pedido2);
+		
+		Produto sabonete = new Produto("Sabonete Azul", 5.0f, 100);
+		Produto pasta = new Produto("Pasta de dente Colgate", 7.50f, 150);
+		
+		List<Produto> produtos = new ArrayList<Produto>();
+		pedido1.setProdutos(produtos);
+		pedido2.setProdutos(produtos);
 		
 		try {
 			clienteDao.salvar(cliente);

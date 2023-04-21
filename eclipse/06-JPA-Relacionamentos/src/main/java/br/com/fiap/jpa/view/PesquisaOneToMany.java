@@ -5,6 +5,9 @@ import javax.persistence.EntityManagerFactory;
 
 import br.com.fiap.jpa.dao.ClienteDao;
 import br.com.fiap.jpa.dao.ClienteDaoImpl;
+import br.com.fiap.jpa.entity.Cliente;
+import br.com.fiap.jpa.entity.Pedido;
+import br.com.fiap.jpa.entity.Produto;
 import br.com.fiap.jpa.exception.EntityNotFoundedException;
 import br.com.fiap.jpa.singleton.EntityManagerFactorySingleton;
 
@@ -17,6 +20,19 @@ public class PesquisaOneToMany {
 		
 		ClienteDao clienteDao = new ClienteDaoImpl(em);
 		
-		System.out.println(clienteDao.pesquisar(1).getNomeCliente());
+		try {
+			Cliente cliente = clienteDao.pesquisar(1);
+			System.out.println(cliente.getNomeCliente());
+			System.out.println("Pedidos");
+			for(Pedido pedido : cliente.getPedidos()) {
+				System.out.println(pedido.getValorPedido());
+				System.out.println("Produtos");
+				for(Produto produto : pedido.getProdutos()) {
+					System.out.println(produto.getNomeProduto());
+				}
+			}
+		} catch(EntityNotFoundedException e) {
+			e.printStackTrace();
+		}
 	}
 }
