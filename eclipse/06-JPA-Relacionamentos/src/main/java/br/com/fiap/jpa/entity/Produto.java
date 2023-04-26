@@ -32,6 +32,8 @@ public class Produto {
 	
 	@ManyToMany(mappedBy = "produtos")
 	private List<Pedido> pedidos;
+	
+	public Produto() {}
 
 	public Produto(String nomeProduto, Float valorProduto, Integer qtdEstoque) {
 		super();
