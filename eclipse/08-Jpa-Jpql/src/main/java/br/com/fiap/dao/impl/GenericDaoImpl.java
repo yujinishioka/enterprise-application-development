@@ -1,8 +1,10 @@
 package br.com.fiap.dao.impl;
 
 import java.lang.reflect.ParameterizedType;
+import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 
 import br.com.fiap.dao.GenericDao;
 import br.com.fiap.exception.CommitException;
@@ -32,7 +34,7 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 	public void remover(K codigo) throws EntityNotFoundException {
 		T entidade = pesquisar(codigo);
 		if (entidade == null){
-			throw new EntityNotFoundException("Entidade n�o encontrada");
+			throw new EntityNotFoundException("Entidade nao encontrada");
 		}
 		em.remove(entidade);
 	}
@@ -50,6 +52,11 @@ public abstract class GenericDaoImpl<T,K> implements GenericDao<T, K> {
 				em.getTransaction().rollback();
 			throw new CommitException("Erro no commit", e);
 		}
+	}
+	
+	public List<T> listar() {
+		return em.createQuery("from " + clazz.getName(), clazz)
+				.getResultList();
 	}
 
 }

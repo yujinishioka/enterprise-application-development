@@ -6,11 +6,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
 import br.com.fiap.dao.PacoteDao;
+import br.com.fiap.dao.TransporteDao;
 import br.com.fiap.dao.impl.PacoteDaoImpl;
+import br.com.fiap.dao.impl.TransporteDaoImpl;
 import br.com.fiap.entity.Pacote;
+import br.com.fiap.entity.Transporte;
 import br.com.fiap.singleton.EntityManagerFactorySingleton;
 
-public class Produtos {
+public class Pacotes {
 	public static void main(String[] args) {
 		
 		EntityManagerFactory fabrica = EntityManagerFactorySingleton.getInstance();
@@ -30,5 +33,13 @@ public class Produtos {
 			System.out.println(p.getDescricao() + " " + p.getPreco());
 		}
 		
+		TransporteDao transporteDao = new TransporteDaoImpl(em);
+		
+		Transporte transporte = transporteDao.pesquisar(1);
+		pacotes = pacoteDao.listarPorTransporte(transporte);
+		System.out.println("Pacotes pelo transporte: " + transporte.getEmpresa());
+		for(Pacote p : pacotes) {
+			System.out.println(p.getDescricao() + " " + p.getTransporte().getEmpresa());
+		}
 	}
 }
