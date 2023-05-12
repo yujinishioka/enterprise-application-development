@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="259FB71D-96DD-F2FE-596B-02D4B708A540" name="Aluno">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:11:05 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_aluno" id="C059FDBA-13E1-0A49-442E-191D90CE7BAA">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:12:28 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_nome" id="06F89A14-37E1-D4BE-D5B8-B9F3C1C4EDE7">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:12:52 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_cpf" id="51B08C3C-4665-09FF-9EA7-135BA1BECC42">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:13:17 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_rg" id="89776993-45B9-B7DB-424A-A6DE375B918B">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:13:34 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_endereco" id="8BF80525-4149-1B04-18BE-FD8C8ACA01DF">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:13:47 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_telefone" id="6A62DB41-F30F-1E15-157F-81899AC512E2">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:14:03 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_email" id="1B526030-25DC-4913-E48A-C09DB1888536">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:14:17 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_turma" id="1FD8C430-FB25-C694-A924-C87958A03796">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:28:29 UTC</createdTime>
+<generatorID>3781631E-6830-954D-8136-72434D5F61CA</generatorID>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<referedAttribute>E0629014-78AA-05D2-9CE6-737173ACEE56</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="546686D5-6FA6-B421-2AB8-71EC124B33B2" name="Aluno PK">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:12:44 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C059FDBA-13E1-0A49-442E-191D90CE7BAA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

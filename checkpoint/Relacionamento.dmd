@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Relacionamento" id="B095DCE9-CD15-FA49-C1F5-69B96BA6CA5A" version="3.5">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:10:32 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>B095DCE9-CD15-FA49-C1F5-69B96BA6CA5A</designId>
+</OSDM_Design>

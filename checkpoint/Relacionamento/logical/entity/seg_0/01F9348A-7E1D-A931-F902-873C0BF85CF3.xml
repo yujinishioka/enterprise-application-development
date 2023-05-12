@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="01F9348A-7E1D-A931-F902-873C0BF85CF3" name="Equipamento_Exercicio">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:25:09 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_equipamento_exercicio" id="0552B9D7-41B3-2001-B35B-A6464ED00BD5">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:32:13 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_exercicio" id="B2372B21-5A82-EB22-39F7-6DD6E434D9DB">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:32:00 UTC</createdTime>
+<generatorID>16CD3DC9-3CAE-9C97-0A8F-665AD9E61B73</generatorID>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<referedAttribute>77192EE5-D835-3BA1-74F6-371D492FC7FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_equipamento" id="8D8C5DDE-DD26-E452-8ACB-810611EBAD3F">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:32:07 UTC</createdTime>
+<generatorID>6AFBFC46-5F55-0465-14A6-4A211C539424</generatorID>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<referedAttribute>E66DE64C-654E-D5C2-6749-B7E9361CD378</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A8709D3B-79C7-0E36-989C-F39EFE42023A" name="Equipamento_Exercicio PK">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:32:25 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0552B9D7-41B3-2001-B35B-A6464ED00BD5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="79ABDC85-7545-A66D-8D32-C5F44D4DC9F7">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:10:33 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

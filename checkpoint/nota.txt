@@ -1,0 +1,6 @@
+RM94170 Felipe Breno Sugisawa Altran
+RM93187 Gabriel João da Silva
+RM94266 Vinicius Alves Torres
+RM92895 Vinicius Yuji Nishioka
+
+Os testes foram realizados em 'TesteOneToOne', 'OneToMany' e 'ManyToMany'.

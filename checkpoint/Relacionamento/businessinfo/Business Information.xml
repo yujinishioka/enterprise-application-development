@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="D82F7A55-D902-1991-E51E-B3858A51684D">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:10:33 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

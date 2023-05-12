@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2CC5EF96-27C5-C0A0-86A0-86DF6405DF7E" name="Exercicio_Treino">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:24:55 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_exercicio_treino" id="850F8160-8246-C120-5216-627BC91D860B">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:31:13 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_treino" id="BE005D2E-A95E-0AB3-2959-6B4AEB0BC549">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:30:50 UTC</createdTime>
+<generatorID>AFF8F371-5616-C466-054B-841D07D11433</generatorID>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<referedAttribute>A2758542-70F4-A9A6-670E-56D009F30CD8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_exercicio" id="520E7539-3DA1-A6CE-99BD-923631EB50EB">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:30:57 UTC</createdTime>
+<generatorID>A5B7B62C-7277-3EBC-A217-E2F8D775D7B7</generatorID>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<referedAttribute>77192EE5-D835-3BA1-74F6-371D492FC7FB</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4A6FFA84-91CB-2B9B-42F8-A487F8B0B33C" name="Exercicio_Treino PK">
+<createdBy>yuuni</createdBy>
+<createdTime>2023-05-07 18:31:27 UTC</createdTime>
+<ownerDesignName>Relacionamento</ownerDesignName>
+<engineerTo>
+<item key="CA48DFDE-122F-7EBC-DFA6-2099404464D6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>850F8160-8246-C120-5216-627BC91D860B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

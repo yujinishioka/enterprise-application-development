@@ -22,6 +22,13 @@ public class Clientes {
 			System.out.println(c.getNome());
 		}
 		
+		// Listar clientes com limites
+		clientes = clienteDao.listar(1, 2);
+		System.out.println("Clientes");
+		for(Cliente c: clientes) {
+			System.out.println(c.getNome());
+		}
+		
 		// Buscar por parte do nome
 		String busca = "Th";
 		List<Cliente> clientesPorNome = clienteDao.listarPorNome(busca);
@@ -34,6 +41,13 @@ public class Clientes {
 		List<Cliente> clientesPorEstado = clienteDao.listarPorEstado(uf);
 		System.out.println("Clientes do estado: " + uf);
 		for(Cliente c: clientesPorEstado) {
+			System.out.println(c.getNome());
+		}
+		
+		int qtd = 10;
+		List<Cliente> clientesPorDiasReserva = clienteDao.listarPorDiaReserva(qtd);
+		System.out.println("Clientes por dias de Reserva: ");
+		for(Cliente c: clientesPorDiasReserva) {
 			System.out.println(c.getNome());
 		}
 	}

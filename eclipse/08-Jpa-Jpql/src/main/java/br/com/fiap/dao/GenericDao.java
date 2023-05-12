@@ -13,5 +13,6 @@ public interface GenericDao<T,K> {
 	T pesquisar(K codigo);
 	void salvar() throws CommitException;
 	List<T> listar();
+	List<T> listar(int posicaoInicial, int max);
 	
 }

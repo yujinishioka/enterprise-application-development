@@ -1,5 +1,6 @@
 package br.com.fiap.dao;
 
+import java.util.Calendar;
 import java.util.List;
 
 import br.com.fiap.entity.Pacote;
@@ -12,5 +13,7 @@ public interface PacoteDao extends GenericDao<Pacote,Integer>{
 	List<Pacote> listarPorPrecoMaior(float preco);
 	
 	List<Pacote> listarPorTransporte(Transporte transporte);
+	
+	List<Pacote> listarPorDatas(Calendar inicio, Calendar fim);
 
 }
