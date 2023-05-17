@@ -1,5 +1,7 @@
 package br.com.fiap.view;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -41,5 +43,11 @@ public class Pacotes {
 		for(Pacote p : pacotes) {
 			System.out.println(p.getDescricao() + " " + p.getTransporte().getEmpresa());
 		}
+		
+		Calendar dataInicio = new GregorianCalendar(2020, Calendar.DECEMBER, 1);
+		Calendar dataSaida = new GregorianCalendar(2021, Calendar.DECEMBER, 31);
+		pacotes = pacoteDao.listarPorDatas(dataInicio, dataSaida);
+		System.out.println("Pesquisar pacotes por Data");
+		pacotes.forEach(p -> System.out.println(p.getDescricao()));
 	}
 }

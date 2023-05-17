@@ -10,6 +10,10 @@ public interface ClienteDao extends GenericDao<Cliente,Integer>{
 	
 	List<Cliente> listarPorEstado(String uf);
 	
+	List<Cliente> listarPorEstados(List<String> uf);
+	
 	List<Cliente> listarPorDiaReserva(int dias);
+	
+	List<Cliente> listarPorParteNomeCidade(String nome, String cidade);
 
 }

@@ -1,5 +1,6 @@
 package br.com.fiap.view;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -30,7 +31,7 @@ public class Clientes {
 		}
 		
 		// Buscar por parte do nome
-		String busca = "Th";
+		String busca = "A";
 		List<Cliente> clientesPorNome = clienteDao.listarPorNome(busca);
 		System.out.println("Clientes buscados: " + busca);
 		for(Cliente c: clientesPorNome) {
@@ -50,5 +51,18 @@ public class Clientes {
 		for(Cliente c: clientesPorDiasReserva) {
 			System.out.println(c.getNome());
 		}
+		
+		String nome = "ia";
+		String cidade = "or";
+		clientes = clienteDao.listarPorParteNomeCidade(nome, cidade);
+		System.out.println("Clientes por parte do Nome e parte da Cidade: ");
+		clientes.forEach(c -> System.out.println(c.getNome()));
+		
+		List<String> estados = new ArrayList<String>();
+		estados.add(uf);
+		estados.add("SP");
+		clientes = clienteDao.listarPorEstados(estados);
+		System.out.println("Cidades por Estados");
+		clientes.forEach(c -> System.out.println(c.getNome() + " " + c.getEndereco().getCidade().getNome()));
 	}
 }
