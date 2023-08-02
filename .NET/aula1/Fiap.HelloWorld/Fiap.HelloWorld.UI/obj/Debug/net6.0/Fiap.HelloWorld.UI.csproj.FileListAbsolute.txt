@@ -1,0 +1,15 @@
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\bin\Debug\net6.0\Fiap.HelloWorld.UI.exe
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\bin\Debug\net6.0\Fiap.HelloWorld.UI.deps.json
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\bin\Debug\net6.0\Fiap.HelloWorld.UI.runtimeconfig.json
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\bin\Debug\net6.0\Fiap.HelloWorld.UI.dll
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\bin\Debug\net6.0\Fiap.HelloWorld.UI.pdb
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.csproj.AssemblyReference.cache
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.GeneratedMSBuildEditorConfig.editorconfig
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.AssemblyInfoInputs.cache
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.AssemblyInfo.cs
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.csproj.CoreCompileInputs.cache
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.dll
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\refint\Fiap.HelloWorld.UI.dll
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.pdb
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\Fiap.HelloWorld.UI.genruntimeconfig.cache
+D:\yuji\enterprise-application-development\.NET\aula1\Fiap.HelloWorld\Fiap.HelloWorld.UI\obj\Debug\net6.0\ref\Fiap.HelloWorld.UI.dll
