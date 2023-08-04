@@ -11,5 +11,16 @@ namespace Fiap.HelloWorld.UI.Models
         public string Raca { get; set; }
         public string Nome { get; set; }
         public string Dono { get; set; }
+
+        // Construtor
+        public Cachorro(float peso, int idade) : base(peso, idade) 
+        { 
+        
+        }
+
+        public Cachorro(float peso, int idade, string nome) : base(peso, idade)
+        {
+            Nome = nome;
+        }
     }
 }

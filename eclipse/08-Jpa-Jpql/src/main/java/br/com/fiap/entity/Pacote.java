@@ -15,6 +15,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+@NamedQuery(name="Pacote.PorIntervaloDias", query = "select p from Pacote p where p.qtdDias between :i and :f")
+
 @Entity
 @Table(name="TB_EAD_PACOTE")
 @SequenceGenerator(name="seqPacote", sequenceName="SEQ_TB_EAD_PACOTE", allocationSize=1)

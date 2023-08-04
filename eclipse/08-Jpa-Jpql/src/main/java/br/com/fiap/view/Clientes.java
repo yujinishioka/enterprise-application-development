@@ -64,5 +64,8 @@ public class Clientes {
 		clientes = clienteDao.listarPorEstados(estados);
 		System.out.println("Cidades por Estados");
 		clientes.forEach(c -> System.out.println(c.getNome() + " " + c.getEndereco().getCidade().getNome()));
+		
+		long qtd1 = clienteDao.contarPorEstado("PR");
+		System.out.println("Quantidade de clientes: " + qtd1);
 	}
 }

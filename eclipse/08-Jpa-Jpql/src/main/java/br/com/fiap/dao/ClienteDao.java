@@ -15,5 +15,7 @@ public interface ClienteDao extends GenericDao<Cliente,Integer>{
 	List<Cliente> listarPorDiaReserva(int dias);
 	
 	List<Cliente> listarPorParteNomeCidade(String nome, String cidade);
+	
+	Long contarPorEstado(String estado);
 
 }

@@ -49,5 +49,8 @@ public class Pacotes {
 		pacotes = pacoteDao.listarPorDatas(dataInicio, dataSaida);
 		System.out.println("Pesquisar pacotes por Data");
 		pacotes.forEach(p -> System.out.println(p.getDescricao()));
+		
+		double preco = pacoteDao.somarPrecosPorTransporte(transporte);
+		System.out.println(preco);
 	}
 }

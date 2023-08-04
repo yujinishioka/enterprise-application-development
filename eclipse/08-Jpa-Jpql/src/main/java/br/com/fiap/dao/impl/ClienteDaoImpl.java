@@ -44,4 +44,10 @@ public class ClienteDaoImpl extends GenericDaoImpl<Cliente,Integer> implements C
 				.getResultList();
 	}
 
+	public Long contarPorEstado(String estado) {
+		return em.createQuery("select coun(*) from Cliente c where c.endereco.cidade.uf = :estado", Long.class)
+				.setParameter("estado", estado)
+				.getSingleResult();
+	}
+
 }
