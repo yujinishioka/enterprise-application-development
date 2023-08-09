@@ -6,21 +6,32 @@ using System.Threading.Tasks;
 
 namespace Fiap.HelloWorld.UI.Models
 {
-    public class Cachorro: Animal
+    internal class Cachorro : Animal, IMamifero
     {
-        public string Raca { get; set; }
         public string Nome { get; set; }
+        public string Raca { get; set; }
         public string Dono { get; set; }
 
-        // Construtor
-        public Cachorro(float peso, int idade) : base(peso, idade) 
-        { 
-        
+        //Construtor que "chama" o construtor de animal (Peso, Idade)
+        public Cachorro(float peso, int idade) : base(peso, idade)
+        {
+
         }
 
+        //Construtor que recebe peso, idade e o nome
         public Cachorro(float peso, int idade, string nome) : base(peso, idade)
         {
             Nome = nome;
+        }
+
+        public void Amamentar()
+        {
+            Console.WriteLine("Cachorro amamentando");
+        }
+
+        public void Parir()
+        {
+            Console.WriteLine("Cachorro dando cachorrinhos");
         }
     }
 }

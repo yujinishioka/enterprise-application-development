@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace Fiap.HelloWorld.UI.Models
 {
-    public class Pessoa
+    public abstract class Pessoa
     {
-        // Atributos
-        private string _nome, _cpf;
+        //Atributos
+        private string _nome;
         private int _idade;
 
-        // Propriedades
-        public string Nome 
-        { 
-            get { return _nome; } 
-            set { _nome = value; } 
+        //Propriedades (Getters e Setters)
+        public Genero Genero { get; set; }
+
+        public string Cpf { get; set; }
+
+        public string Nome
+        {
+            get { return _nome; }
+            set { _nome = value; }
         }
 
         public int Idade
@@ -25,6 +29,24 @@ namespace Fiap.HelloWorld.UI.Models
             set { _idade = value; }
         }
 
-        public string Cpf { get; set; }
+        //Métodos
+        public abstract void Trabalhar();
+
+        //virtual -> permite a sobrescrita
+        public virtual void Andar()
+        {
+            Console.WriteLine("Pessoa andando");
+        }
+
+        public void Andar(string destino)
+        {
+            Console.WriteLine($"Andando até {destino}");
+        }
+    }//class
+
+    public enum Genero
+    {
+        Masculino, Feminino, Outros
     }
-}
+
+}//namespace

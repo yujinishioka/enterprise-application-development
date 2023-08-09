@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Fiap.HelloWorld.UI.Models
 {
-    public class Animal
+    internal class Animal
     {
-        public string Porte { get; set; }
+        public char Genero { get; set; }
         public int Idade { get; set; }
-        public int Peso { get; set; }
+        public float Peso { get; set; }
 
-        public Animal(float peso, int idade) 
+        //Criar um construtor com Peso e Idade
+        public Animal(float peso, int idade)
         {
-            float Peso = peso;
-            int Idade = idade;
+            Idade = idade;
+            Peso = peso;
         }
     }
 }
