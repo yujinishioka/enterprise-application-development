@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Yuji\\enterprise-application-development\\.NET\\aula1\\Fiap.HelloWorld\\Fiap.HelloWorld.UI\\Fiap.HelloWorld.UI.csproj": {}
+    "D:\\Yuji\\enterprise-application-development\\.NET\\aula2\\Fiap.Bank\\Fiap.Bank.csproj": {}
   },
   "projects": {
-    "D:\\Yuji\\enterprise-application-development\\.NET\\aula1\\Fiap.HelloWorld\\Fiap.HelloWorld.UI\\Fiap.HelloWorld.UI.csproj": {
+    "D:\\Yuji\\enterprise-application-development\\.NET\\aula2\\Fiap.Bank\\Fiap.Bank.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Yuji\\enterprise-application-development\\.NET\\aula1\\Fiap.HelloWorld\\Fiap.HelloWorld.UI\\Fiap.HelloWorld.UI.csproj",
-        "projectName": "Fiap.HelloWorld.UI",
-        "projectPath": "D:\\Yuji\\enterprise-application-development\\.NET\\aula1\\Fiap.HelloWorld\\Fiap.HelloWorld.UI\\Fiap.HelloWorld.UI.csproj",
+        "projectUniqueName": "D:\\Yuji\\enterprise-application-development\\.NET\\aula2\\Fiap.Bank\\Fiap.Bank.csproj",
+        "projectName": "Fiap.Bank",
+        "projectPath": "D:\\Yuji\\enterprise-application-development\\.NET\\aula2\\Fiap.Bank\\Fiap.Bank.csproj",
         "packagesPath": "C:\\Users\\logonrmlocal\\.nuget\\packages\\",
-        "outputPath": "D:\\Yuji\\enterprise-application-development\\.NET\\aula1\\Fiap.HelloWorld\\Fiap.HelloWorld.UI\\obj\\",
+        "outputPath": "D:\\Yuji\\enterprise-application-development\\.NET\\aula2\\Fiap.Bank\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
