@@ -43,7 +43,14 @@ IList<Cachorro> lista = new List<Cachorro>();
 var dog1 = new Cachorro(15, 2, "Marrie");
 var dog2 = new Cachorro(5, 8, "Rex");
 
-//Exibir a quantidade de dogs na lista
+lista.Add(dog1);
+lista.Add(dog2);
 
+//Exibir a quantidade de dogs na lista
+Console.WriteLine(lista.Count);
 
 //Exibir os dados dos dogs da lista
+foreach (var c in lista)
+{
+    Console.WriteLine($"Nome: {c.Nome}, Idade: {c.Idade}, Raça: {c.Raca}");
+}
