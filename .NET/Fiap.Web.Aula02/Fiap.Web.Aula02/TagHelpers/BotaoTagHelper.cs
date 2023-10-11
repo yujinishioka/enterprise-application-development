@@ -12,8 +12,7 @@ namespace Fiap.Web.Aula02.TagHelpers
             output.TagName = "button";
             output.Attributes.SetAttribute("class", "btn btn-primary");
             output.Content.SetContent(
-                string.IsNullOrEmpty(Texto) ? "Cadastrar" : Texto
-            );
+                string.IsNullOrEmpty(Texto)?"Cadastrar":Texto);
         }
     }
 }

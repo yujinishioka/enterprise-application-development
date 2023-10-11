@@ -6,9 +6,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var connection = builder.Configuration.GetConnectionString("prod");
+//Recuperar a string de conexao do arquivo appsettings.json
+var conn = builder.Configuration.GetConnectionString("conexao");
 
-builder.Services.AddDbContext<StreamingContext>(op => op.UseSqlServer(connection));
+//Configurar o serviço de injeção de dependência do DbContext
+builder.Services.AddDbContext<StreamingContext>(op => op.UseSqlServer(conn));
 
 var app = builder.Build();
 
