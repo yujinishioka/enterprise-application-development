@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Github\\FIAP\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj": {}
+    "D:\\yuji\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj": {}
   },
   "projects": {
-    "E:\\Github\\FIAP\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj": {
+    "D:\\yuji\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Github\\FIAP\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj",
+        "projectUniqueName": "D:\\yuji\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj",
         "projectName": "Fiap.Web.Aula03",
-        "projectPath": "E:\\Github\\FIAP\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj",
-        "packagesPath": "C:\\Users\\yuuni\\.nuget\\packages\\",
-        "outputPath": "E:\\Github\\FIAP\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\obj\\",
+        "projectPath": "D:\\yuji\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\Fiap.Web.Aula03.csproj",
+        "packagesPath": "C:\\Users\\logonrmlocal\\.nuget\\packages\\",
+        "outputPath": "D:\\yuji\\enterprise-application-development\\.NET\\Fiap.Web.Aula03\\Fiap.Web.Aula03\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\yuuni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\logonrmlocal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,13 +47,17 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.11, )"
+              "version": "[7.0.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
             }
           },
           "imports": [
@@ -71,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

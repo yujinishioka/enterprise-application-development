@@ -85,3 +85,14 @@ E:\Github\FIAP\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.
 E:\Github\FIAP\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.pdb
 E:\Github\FIAP\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.genruntimeconfig.cache
 E:\Github\FIAP\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\ref\Fiap.Web.Aula03.dll
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.csproj.AssemblyReference.cache
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.GeneratedMSBuildEditorConfig.editorconfig
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.AssemblyInfoInputs.cache
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.AssemblyInfo.cs
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.csproj.CoreCompileInputs.cache
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.MvcApplicationPartsAssemblyInfo.cache
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.RazorAssemblyInfo.cache
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.RazorAssemblyInfo.cs
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.dll
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\refint\Fiap.Web.Aula03.dll
+D:\yuji\enterprise-application-development\.NET\Fiap.Web.Aula03\Fiap.Web.Aula03\obj\Debug\net6.0\Fiap.Web.Aula03.pdb
