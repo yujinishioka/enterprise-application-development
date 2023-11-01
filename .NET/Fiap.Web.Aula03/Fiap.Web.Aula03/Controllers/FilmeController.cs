@@ -1,6 +1,8 @@
 ﻿using Fiap.Web.Aula03.DataBase;
 using Fiap.Web.Aula03.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 namespace Fiap.Web.Aula03.Controllers
 {
@@ -12,6 +14,19 @@ namespace Fiap.Web.Aula03.Controllers
         public FilmeController(StreamingContext context)
         {
             _context = context;
+        }
+
+        [HttpGet]
+        public IActionResult Info(int id)
+        {
+            //pesquisar todos os atores
+            var atores = _context.Atores.ToList();
+            //enviar a lista atores com viewbag
+            ViewBag.atores = atores;
+            //Pesquisa o filme pelo id
+            var filme = _context.Filmes.Include(f => f.Produtora).First(f => f.FilmeId == id);
+            //Retorna a página com o filme
+            return View(filme);
         }
 
         [HttpPost]
@@ -31,6 +46,7 @@ namespace Fiap.Web.Aula03.Controllers
         [HttpGet]
         public IActionResult Editar(int id)
         {
+            CarregarProdutoras();
             //Pesquisar o filme pelo Id
             var filme = _context.Filmes.Find(id);
             //Retorar a view com o objeto filme
@@ -52,8 +68,9 @@ namespace Fiap.Web.Aula03.Controllers
         public IActionResult Index(string termoBusca)
         {
             //Pesquisar por parte do titulo
-            var lista = _context.Filmes
-                    .Where(f => f.Titulo.Contains(termoBusca) || termoBusca == null)
+            var lista = _context.Filmes                    
+                    .Where(f => f.Titulo.Contains(termoBusca) || termoBusca == null)                    
+                    .Include(f => f.Produtora)
                     .ToList();
             return View(lista);
         }
@@ -61,7 +78,17 @@ namespace Fiap.Web.Aula03.Controllers
         [HttpGet]
         public IActionResult Cadastrar()
         {
+            CarregarProdutoras();
             return View();
+        }
+
+        //Envia as informações da produtora para preencher as options do select
+        private void CarregarProdutoras()
+        {
+            //Recuperar todas as produtoas
+            var lista = _context.Produtoras.ToList();
+            //Enviar o objeto que preenche o select de produtoras
+            ViewBag.produtoras = new SelectList(lista, "ProdutoraId", "Nome");
         }
 
         [HttpPost]
